@@ -7,7 +7,20 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 --
 
-config.window_background_opacity = 0.95
+config.window_background_opacity = 1.0
+config.background = {
+  {
+    source = {
+      File = "/Users/simon/background.jpg", 
+    },
+    hsb = {
+      brightness = 0.05, -- lower = dimmer
+      saturation = 0.75,
+      hue = 1.0,
+    },
+  },
+}
+
 config.window_decorations = "RESIZE"
 config.color_scheme = "Monokai Pro (Gogh)"
 
